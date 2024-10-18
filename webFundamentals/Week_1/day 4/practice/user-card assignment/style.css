@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 1000px;
+    margin:  0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+                
+                
+
+}
+    
+.user{
+    width: 70%;
+    background-color: #fff;
+    border: 2px solid grey;
+    margin-top: 30px;
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: 1.2rem;
+    
+    align-items: center;
+    
+    
+}
+.header{
+    background-color:#17A2B8;
+    height: 100px;
+    margin-bottom: 80px;
+    
+    
+}
+.cardbody{
+
+    padding: 20px;
+
+
+}
+.cardbody h1,.cardbody h3,.cardbody p{
+    margin: 20px;
+}
+.userphoto{
+    border-radius: 50%;
+    height: 150px;
+    padding: 5px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.icons{
+    height: 5px;
+    width: 5px;
+}

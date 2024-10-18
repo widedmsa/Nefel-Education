@@ -1,0 +1,58 @@
+.row{
+display: flex;
+flex-direction: column;
+color: white;
+
+
+
+    
+}
+
+.row div {
+    width: 100%;
+}
+.col{ background-color: rgb(82, 205, 174);
+    height: 20px;
+    width: 50px;
+
+    background-color: rgb(82, 205, 174);
+    text-align: left;
+    display: inline;
+
+    
+}
+.col-2{
+    display: inline;
+
+    background-color: rgb(82,205, 174);
+    height: 20px;
+    width: :50px
+    
+    
+
+}
+.col-3{
+
+    background-color: rgb(82, 205, 174);
+    height: 20px;
+    width: 50px;
+    display: inline;
+}
+.first{
+    display: flex;
+    justify-content: space-between ;
+    height: 50px;
+    gap: 20px;
+
+}
+.second{
+    display: flex;
+    gap: 20px;
+    height: 50px;
+}
+.third{
+    display: flex;
+    gap: 20px;
+    height: 50px;
+
+}

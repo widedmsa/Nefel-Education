@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>JAMES <span>CONSULTING</span></h1>
+            <ul>
+                <li><span>Home</span></li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Projects</li>
+                <li>Clients</li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="bloc-1"><img src="/assets/main_img.png" alt="main.image" onclick="hide(this)"></div>
+            <div class="bloc-2">
+                    <div class="box-infos"  id="deleteThis">
+                        <div class="box-title">
+                            <button class="thisBtn" onclick="deleteBox('deleteThis')">X</button>
+                            <h2>Services</h2>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum assumenda, corrupti quas aliquid quisquam repellat repellendus consectetur numquam. Repudiandae maxime impedit quam cum provident aliquam obcaecati qui mollitia</p>
+                        <button class="info-btn" onclick="deleteBox('deleteThis')">More info</button>
+                    </div>
+                    <div class="box-infos">
+                        <div class="box-title">
+                            <img src="/assets/icon.png" alt="icon">
+                            <h2 id="h2delete">Projects</h2>
+                            </div>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla recusandae voluptates dolor delectus dolorem cumque odit error alias omnis mollitia, possimus corporis autem, nisi ad, numquam provident odio consequatur earum.</p>
+                        <button class="info-btn" onclick="hideBtn('#h2delete')">More info</button>
+                    </div>
+                    <div class="box-infos">
+                        <div class="box-title">
+                            <img src="/assets/icon.png" alt="icon">
+                            <h2>Clients</h2>
+                        </div>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis nesciunt assumenda possimus exercitationem corrupti nisi voluptatem, eos reiciendis cupiditate inventore dolor sint sunt veniam id atque libero modi labore corporis?</p>
+                        <button class="info-btn" onclick="hideBtn(this)">More info</button>
+                    </div>
+            </div>
+            <div class="bloc-3">
+                <div class="white-card">
+                    <h2>The world can be yours!</h2>
+                    <img src="/assets/building.png" alt="">
+                </div>
+                <div class="white-card">
+                    <h3>&nbsp;</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam hic illum est ducimus ipsa dicta amet maiores, rem labore tempore aut distinctio dolorum quo accusantium? Nihil error reiciendis nesciunt maxime?</p>
+                    <a href="#" onclick="alert('check this website for more information about our services ')">Learn more</a>
+                </div>
+                <div class="white-card">
+                    <h2>Testimonial</h2>
+                    <div>
+                        <p id="click">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam eaque eveniet illum. Et nulla fuga enim odit natus, consequuntur optio amet quibusdam? Asperiores eum delectus nostrum voluptas perferendis natus cupiditate!</p>
+                    </div>
+                    <p> Samantha Jones : Project Manager</p>
+                </div>
+                
+            </div>
+        </div>
+        <div class="footer">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Projects</li>
+                <li>Clients</li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

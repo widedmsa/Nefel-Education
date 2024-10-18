@@ -1,0 +1,36 @@
+* {
+    margin :0 ;
+    padding : 10px ;
+}
+h1{
+    color: #464F86;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 100px;
+}
+.blue{
+
+    background-color: #5CC8D3;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.pink{
+    
+    background-color: #D8A5AA;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.white{
+
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    
+}
+img{
+    height : 10%;
+    width : 10% ;
+}

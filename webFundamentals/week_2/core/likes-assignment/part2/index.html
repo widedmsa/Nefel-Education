@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Likes</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <h1>Network</h1>
+        </div>
+        <h1 id="title">Your feed </h1>
+        <div class="main">
+            <div class="user">
+                <img src="/user-circle.png" alt="user">
+                <p><a href="#">Add an avatar</a></p>
+                <h1>James Doe</h1>
+            </div>
+            <div class="feeds">
+                <div class="box">
+                    <div class="header">
+                        <h1>Neil M</h1>
+                        <h1> <span id="likesnum">9</span>  like(s)</h1>
+                        <button class="likes-btn" onclick="increaseLikes('#likesnum')">Like</button>
+                    </div>
+                <p>I just set up a new discord , let me know what you all think <a href="#">link</a></p>
+                </div>
+                <div class="box">
+                    <div class="header">
+                        <h1> Nichol K </h1>
+                        <h1><span id="likesnum1">12</span> like(s)</h1>
+                        <button class="likes-btn" onclick="increaseLikes('#likesnum1')">Like</button>
+                    </div>
+                    <p>just finished my <a href="#">next comic</a> check it out</p>
+                </div>
+                <div class="box">
+                    <div class="header">
+                        <h1>Jim R</h1>
+                        <h1><span id="likesnum2">9</span>like(s)</h1>
+                        <button class="likes-btn" onclick="increaseLikes('#likesnum2')">Like</button>
+                    </div>
+                    <p>I can't stop listening to the <a href="#">new album</a>who else likes it?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

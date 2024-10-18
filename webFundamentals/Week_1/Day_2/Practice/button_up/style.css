@@ -1,0 +1,46 @@
+*{
+    font-family: cursive;
+}
+
+
+
+
+.searchbar { 
+    color: #7dc8c8;
+    border: 2px solid #7dc8c8;
+    border-radius: 20px  ;
+    height: 30px;
+    width: 150px;
+    background-color: white;
+    position: relative;
+    left: 35px;
+    top: 30px;
+    
+
+}
+
+.plusbutton {
+    width: 40px;
+    height: 40px;
+    background-color: #00d1b2;
+    color: white;
+    border-radius: 50%;
+    border : none;
+    position: relative;
+    left: 35px;
+    top: 40px;
+    font-size: x-large;
+    padding-bottom: 10px;
+}
+
+.addaccount{
+    background-color: #2B78E4;
+    color: white;
+    border-style: solid;
+    border-width: medium;
+    position: relative;
+    left: 40px;
+    top: 55px;
+    width: 170px;
+    height: 40px;
+}

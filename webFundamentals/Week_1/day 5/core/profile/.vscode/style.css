@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+    justify-content: center;
+
+
+    
+}
+.first{
+    background-color: pink;
+    height: 50px;
+    width: 50px;
+}
+.second{
+    background-color: rgb(80, 178, 223);
+}

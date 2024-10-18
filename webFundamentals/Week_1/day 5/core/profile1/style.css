@@ -1,0 +1,147 @@
+body{
+    font-family: 'Roboto',sans-serif;
+
+
+}
+.container{
+justify-content: center;
+    align-items: center;
+    
+    
+    
+}.mainbar{
+    background-color:rgb(47, 44, 44);
+    color: white;
+    
+    height: 80PX;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.navlinks{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+
+    justify-content: space-evenly;
+    
+    
+}
+
+.navlinks a {
+    text-decoration: none;
+    color:white;
+    justify-content: space-between;
+
+}
+.navtitle{
+    padding-left: 50px;
+}
+.btn{
+    height: 35px;
+    width: 80px;
+    background-color: aqua;
+    border: solid black;
+
+    box-shadow: 5px 5px #000000;
+    
+}
+.usercard{
+    height: 300px;
+    width: 500px;
+    margin-top: 20px;
+    border: solid rgb(192, 186, 186);
+    border-radius: 10px;
+    margin-left: 150px;
+    }
+.header{
+    height: 30%;
+    background-color: aqua;
+    border: none;
+    border-radius: 5px;
+    
+    
+    
+}
+
+
+.loction {
+    
+    font-size: 100px;
+    margin-left: 10px;
+    
+}
+.body{
+
+    margin-left: 20px;
+    margin-top: 40px;
+    
+
+}
+.header img{
+    height: 100px;
+    width: 100px;
+    margin-left: 20px;
+    margin-top: 30px;
+
+}
+.location img{
+    height: 30px;
+    width:20px;
+}
+.gear{
+    height: 20px;
+    width:  20px ;
+}
+h1{
+    font-size: 200px;
+}
+.education{
+    height: 150px;
+    width: 500px;
+    margin-top: 60px;
+    border: solid rgb(190, 180, 180);
+    align-items: center;
+    border-radius: 10px;
+
+}
+.header1{
+    height: 30%;
+    background-color: rgb(48, 46, 46);
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+}
+h1{
+    font-size: 20px;
+    padding: 0;
+}
+
+
+.userinfos{
+    display: inline-block;
+    justify-content:flex-start;
+    vertical-align:middle;
+}
+.requests{
+    height: 200px;
+    width: 200px;
+
+    margin-top: 30px;
+}
+.header2{
+    background-color:black;
+    height: 30%;
+}
+.connections{
+    height: 200px;
+    width: 200px;
+
+}
+.header3{
+    background-color:black;
+    height: 30%;
+
+}

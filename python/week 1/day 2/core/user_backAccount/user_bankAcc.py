@@ -1,0 +1,66 @@
+class BankAccount:
+    int_rate = 0.01 #default_values
+    balance = 0
+    def __init__(self, int_rate, balance): 
+        #instances_attributes 
+        self.int_rate= int_rate 
+        self.balance =balance
+
+
+
+    def deposit(self, amount):
+        self.balance += amount
+        return self
+
+
+
+    def withdraw(self, amount):
+        if (self.balance - amount) > 0:
+            self.balance -= amount
+        else:
+            print("insufficient funds : Charging a $5 fee")
+            self.balance=self.balance-5
+        return self
+
+
+
+            
+    def display_account_info(self):
+        print(f"Balance : ${self.balance}")
+        return self 
+
+    def yield_interest(self):
+        if self.balance > 0 :
+            self.balance = self.balance+(self.balance * self.int_rate)
+        return self 
+
+
+user_1 = BankAccount(0.3,300)
+user_2= BankAccount(0.4,100)
+user_1.deposit(50).deposit(100).deposit(30).withdraw(300).yield_interest().display_account_info()
+user_2.deposit(20).deposit(40).withdraw(50).withdraw(100).withdraw(60).withdraw(100).yield_interest().display_account_info()
+
+
+
+
+class User:
+    def __init__(self, name, email):
+        self.name = name
+        self.email = email
+        self.account = BankAccount(int_rate=0.02, balance=0)
+    
+    
+    def make_deposit(self, amount):
+        self.account.balance = self.account.balance + amount
+
+
+    def make_withdrawal(self,amount) :
+        self.account.balance = self.account.balance - amount 
+
+    def display_user_account() :
+        print(self.account.balance)
+
+
+
+user1 =User("Jhon","jhonmyt@gmail.com")
+user1.make_deposit(50)

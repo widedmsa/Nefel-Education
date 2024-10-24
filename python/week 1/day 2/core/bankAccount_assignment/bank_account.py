@@ -24,7 +24,6 @@ class BankAccount:
 
 
 
-            
     def display_account_info(self):
         print(f"Balance : ${self.balance}")
         return self 

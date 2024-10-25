@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    /* }
+    .boxes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; */
+
+
+    .box{
+        width: 200px;
+        height: 200px;
+        border: solid black 3px;
+        border-radius: 20px;
+    }
+</style>
+<body>
+    <div class="container">
+        <h1>welcome!</h1>
+        {% for i in range(number) %}
+            <div class="box" style="background-color: {{color}} ;" ></div>
+        {% endfor %}
+    </div>
+</body>
+</html>

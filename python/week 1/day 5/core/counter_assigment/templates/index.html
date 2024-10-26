@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin:0 auto;
+    }
+    .container{
+        width: 700px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .buttons{
+        display: flex ;
+        justify-content: space-between;
+        gap: 70px ;
+    
+    }
+    #click{
+        width: 60px;
+        height: 30px;
+        background-color: blue;
+        border-radius: 20px;
+    }
+    #reset{
+        width: 60px;
+        height: 30px;
+        background-color: red;
+        border-radius: 20px;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <h1>Counter</h1>
+        <h2>{{counter}}</h2>
+        <div class="buttons">
+            <form action="/count"> 
+                <button type="submit" id="click">Click</button>
+            </form>
+            <form action="/reset" >  
+                <button type="submit" id="reset">Reset</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

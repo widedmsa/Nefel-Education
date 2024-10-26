@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0 auto;
+    }
+    table {
+            width: 800px;
+            border-collapse: collapse;
+            color: white;
+            background-color: black;
+        }
+        th, td {
+            border: 1px solid white;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: rgb(120, 103, 103); 
+        }
+</style>
+<body>
+    <table>
+        <tr>
+            <th>Fisrt name</th>
+            <th>Last name</th>
+            <th>Full name</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{user.first_name}}</td>
+            <td>{{user.last_name}}</td>
+            <td>{{user.first_name}} {{user.last_name}}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+</body>
+</html>

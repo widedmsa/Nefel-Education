@@ -33,4 +33,26 @@ print(x)
 
 
 #Get Values From a List of Dictionaries 
+def iterateDictionary2 (key_name, some_list):
+    for dictionary in some_list:
+        if key_name in dictionary:
+            print(dictionary[key_name])
+
+students = [
+    {'first_name': 'Michael', 'last_name': 'Jordan'},
+    {'first_name': 'John', 'last_name': 'Rosales'},
+    {'first_name': 'Mark', 'last_name': 'Guillen'},
+    {'first_name': 'KB', 'last_name': 'Tonel'}
+]
+
+iterateDictionary2('first_name', students)
+
+
+#Iterate Through a Dictionary with List Values
+def printInfo(some_dict):
+    for key, value_list in some_dict.items():
+        print(f"{key}: {len(value_list)}")
+        for value in value_list:
+            print(value)
+
 

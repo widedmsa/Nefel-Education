@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0 auto;
+    }
+    .container{
+        height: 500px;
+        width: 350px;
+        background-color:#33393e;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        color: white;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        
+}
+    h1{
+        color: rgb(243, 224, 19);
+    }
+    select{
+        width: 250px;
+        height: 30px;
+    }
+    input{
+        width: 250px;
+        height: 30px;
+    }
+    textarea{
+        width: 250px;
+        height: 150px;
+    }
+</style>
+<body>
+    <div class ="container">
+        <h1>Dojo Survey</h1>
+        <form action='/process' method='POST'>
+            <label for='name'>Name:</label>
+            <input type='text' name='name'>
+            <label for="location">Dojo location</label>
+            <select name="location" id="">
+                <option value="USA">USA</option>
+                <option value="Australia">Australia</option>
+                <option value="Alaska">Alaska</option>
+                <option value="China">China</option>
+            </select>
+            <label for="languages">Favorite language</label>
+            <select name="languages" id="">
+                <option value="Python">Python</option>
+                <option value="C#">C#</option>
+                <option value="Java">Java</option>
+                <option value="MERN">MERN</option>
+            </select>
+            <label for="comments">Comments</label>
+            <textarea name="comments" id=""></textarea>
+            <button>Submit</button>
+        
+        </form>
+
+
+    </div>
+</body>
+</html>

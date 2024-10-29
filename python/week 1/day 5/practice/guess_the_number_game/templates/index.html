@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0 auto;
+    }
+    .container{
+        width: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-top: 20px;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        background-color: #33393e;
+        color: white;
+        width: 300px;
+        height: 150px;
+        border: none;
+    }
+    button{
+        background-color:#fec008;
+    }
+</style>
+<body>
+    <div class="container">
+        <h1>Welcome to the Great Number Game !!!</h1>
+        <h3>All you have to do is to guess a number between 1 and 100</h3>
+        <form action="/guess" method="POST">   <!--the route /guess is  where the data will be transferred -->
+                <label for="number">Take a guess !!</label>
+                <input type="number" name="number">
+                <input type="hidden" name="random_number" value="{{ random_number }}">
+                <button>Guess</button>
+        </form>
+    </div>
+</body>
+</html>

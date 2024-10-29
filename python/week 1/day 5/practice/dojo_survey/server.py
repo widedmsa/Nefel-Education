@@ -10,7 +10,7 @@ def display():
 def submit():
     print(request.form)
     #extract the form data from the post request 
-    # we will create varibales 
+    # we create varibales 
     name= request.form['name']
     location=request.form['location']
     languages=request.form['languages']
@@ -20,8 +20,14 @@ def submit():
     session['location']=location
     session['languages']=languages
     session['comments']=comments
+
+
+    if 'messages' not in session :
+        session['messages']=messages
+
     
     return redirect('/result')
+
 
 
 

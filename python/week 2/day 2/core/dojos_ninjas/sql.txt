@@ -1,0 +1,24 @@
+SELECT * FROM dojos ;
+INSERT INTO dojos (name)  VALUES ("Martial Arts Dojo"),("Coding Dojo"),("Meditation Dojo") ;
+DELETE FROM dojos WHERE id IN (1,2,3);
+INSERT INTO dojos (name) VALUES ("karate dojo"),("Samurai dojo"),("JUdo dojo") ;
+
+
+
+INSERT INTO ninjas (name,dojo_id) VALUES ("NINJA1",1),("NINJA2",1),("NINJA3",1) ;
+INSERT INTO ninjas (name,dojo_id) VALUES ("NINJA4",2),("NINJA5",2),("NINJA6",2) ;
+INSERT INTO ninjas (name,dojo_id) VALUES ("NINJA7",3),("NINJA8",3),("NINJA9",3) ;
+
+SELECT name FROM ninjas WHERE dojo_id = 1;
+SELECT name FROM ninjas WHERE id = 3;
+
+SELECT dojos.name
+FROM ninjas
+JOIN dojos ON ninjas.dojo_id = dojos.id
+ORDER BY ninjas.id DESC;
+
+
+SELECT ninjas.name, dojos.name
+FROM ninjas
+JOIN dojos ON ninjas.dojo_id = dojos.id
+WHERE ninjas.id = 6;

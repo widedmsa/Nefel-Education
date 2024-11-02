@@ -13,11 +13,20 @@
 
 function join(array,separator){
     var empty = "" 
-    if (array.length <1) {
+    if (array.length < 1) {
         return empty 
     }
-    elif (array.length =1) {
-        empty = array 
+    else if (array.length ==1) {
+        return array[0]
     }
-    else 
-}
+    else {
+        for (var i =0;i<array.length-1;i++) {
+            empty += array[i]+separator
+        }  empty += array[array.length - 1]; //after the loop completes(when it reaches array.length-2) we add the last element of the array without the separator 
+            
+            
+        } return empty 
+    }  
+
+var result = join(["apple","blueberry","water-melon","strawberry"],"-")
+console.log(result)

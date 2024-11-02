@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+</head>
+
+<style>
+    *{
+        margin: 0 auto;
+    }
+    .container{
+        margin-top: 20px;
+        width: 500px;
+        text-align: center;
+        gap: 10px;
+        
+    }
+    form
+    {display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+input{
+    width: 230px;
+    height: 30px;
+    border-radius: 40px;
+}
+button{
+    background-color: aqua;
+    border-radius: 40px;
+    width: 65px;
+    height: 30px;
+}
+
+</style>
+<body>
+    <div class="container">
+        <h1>Edit user {{user.id}}</h1>
+        <form action="/users/create" method="POST">
+            <label for="first_name" >First name :</label>
+            <input type="text" name="first_name">
+            <label for="last_name"  name="last_name">Last name :</label>
+            <input type="text" name="last_name" id="">
+            <label for="email">Email :</label>
+            <input type="text" name="email">
+            <button type="submit">Update</button>
+            <a href="">Show user</a>
+            <a href="/users">Home</a>
+        </form>
+    </div>
+</body>
+</html>

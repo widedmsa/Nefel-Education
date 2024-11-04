@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Read All</title>
+</head>
+<style>
+    td:nth-child(5){
+        display: flex;
+        justify-content: space-evenly;
+    }
+    button{
+        border-radius: 30px;
+        width: 80px;
+        color: white;
+    }
+    #show{
+        background-color: 
+    white;
+    }
+    a{
+        color: black;
+    }
+    #delete{
+        background-color: rgb(230, 139, 139);
+    }
+    #edit{
+        background-color: rgb(162, 249, 220);
+    }
+</style>
+<body>
+    <div class="container">
+        <h1>All Users</h1>
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Full name</th>
+                    <th>Email</th>
+                    <th>Created at </th>
+                    <th>Actions</th>
+                </tr>
+            <tbody>
+                {% for user in users %}
+                <tr>
+                    <td>{{user.id}}</td>
+                    <td>{{user.first_name}}</td>
+                    <td>{{user.last_name}}</td>
+                    <td>{{user.created_at}}</td>
+                    <td>
+                        <button id="show"><a href="/users/{{user.id}}">Show</a></button>
+                        <button id="edit"><a href="/users/{{user.id}}/edit">Edit</a></button>
+                        <button id="delete"><a href="/delete/{{user.id}}">Delete</a></button>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            </thead>
+        </table>
+        <a href="/users/new">Add a new user </a>
+    </div>
+</body>
+</html>

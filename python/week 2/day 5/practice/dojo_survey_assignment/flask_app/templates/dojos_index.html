@@ -5,32 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    *{
+        margin: 0 auto;
+    }
+    .container{
+        width: 800px;
+        text-align: center;
+        background-color: rgb(241, 211, 216);
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    input,select,textarea{
+        border-radius: 20px;
+    }
+    button{
+        border-radius: 30px;
+    }
+    #flash{
+        background-color: rgb(226, 132, 132);
+    }
+</style>
 <body>
-    <div class="container">
         <div class="container">
-            <h1>Dojo Survie</h1>
-            <form action="/dojo/survey", method="POST">
+            <h1>Dojo Survey</h1>
+            <form action="/dojo/create" method="POST">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" >
+                {% for message in get_flashed_messages(category_filter=["name_validation"]) %}
+                    <div id="flash">
+                        {{message}}         
+                    </div>
+                {% endfor %}
                 <label for="location">Location:</label>
-                <select name="location" id="">
-                    <option value="location">chicago</option>
-                    <option value="location">Newyork</option>
-                    <option value="location">Washington</option>
-                    <option value="location">California</option>
+                <select name="location" >
+                    <option value="Chicago">Chicago</option>
+                    <option value="NewYork">NewYork</option>
+                    <option value="Arizona">Arizona</option>
+                    <option value="California">California</option>
                 </select>
-                <label for="favorite_language">language:</label>
-                <select name="favorite_language" id="">
-                    <option value="language">python</option>
-                    <option value="language">amazig</option>
-                    <option value="language">c#</option>
-                    <option value="language">java</option>
+                {% for message in get_flashed_messages(category_filter=["location_validation"]) %}
+                    <div id="flash" >
+                        {{ message }}         
+                    </div>
+                {% endfor %}
+                <label for="favorite_language">Favorite language:</label>
+                <select name="favorite_language" >
+                    <option value="python">Python</option>
+                    <option value="MERN">MERN</option>
+                    <option value="C#">C#</option>
+                    <option value="Java">Java</option>
                 </select>
-                <label for="comment">comment:</label>
+                {% for message in get_flashed_messages(category_filter=["favorite_language_validation"]) %}
+                    <div id="flash">
+                        {{ message }}         
+                    </div>
+                {% endfor %}
+                <label for="comment">Comment:</label>
                 <textarea name="comment" id="" cols="30" rows="10"></textarea>
+                {% for message in get_flashed_messages(category_filter=["comment_validation"]) %}
+                <div id="flash">
+                    {{message}}         
+                </div>
+                {% endfor %}
                 <button type="submit">submit</button>
             </form>
         </div>
-    </div>
 </body>
 </html>

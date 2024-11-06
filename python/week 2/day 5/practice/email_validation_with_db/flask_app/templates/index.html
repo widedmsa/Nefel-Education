@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation</title>
+</head>
+<style>
+    *{
+        margin :0 auto;
+    }
+    .container{
+        width: 500px;
+        text-align: center;
+        background-color: rgb(92, 143, 179);
+        padding: 20px;
+        gap: 20px;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    input{
+        border-radius: 20px;
+        border: none;
+    }
+    button{
+        border-radius: 10px;
+        border: none;
+        background-color: rgb(255, 181, 45);
+    }
+    #flash{
+        background-color: rgb(230, 207, 207);
+        color: red;
+    }
+</style>
+<body>
+    <div class="container">
+        <form action="/user/registration" method="POST">
+            <label for="email_address">Enter your email address</label>
+            <input type="" name="email_address">
+            <button type="submit">Submit</button>
+        </form>
+        {% for message in get_flashed_messages(category_filter=["email_validation"]) %}
+            <div id="flash">
+                {{message}}         
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

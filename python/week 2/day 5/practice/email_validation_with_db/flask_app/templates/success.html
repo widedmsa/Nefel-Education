@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Page</title>
+</head>
+<style>
+    *{
+        margin: 0 auto;}
+    .container{
+        width: 500px;
+        background-color: rgb(81, 111, 160);
+        padding: 30px;
+    }
+    .container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    }
+
+    h2{
+        color: bisque;
+        
+    }
+    ul li{
+        color: white;
+    }
+        
+    
+</style>
+<body>
+    <div class="container">
+        <h2>The email address you entered (______) is valid , Thank you !</h2>
+        <div class="validation">
+            <h1>Email Adresses entered</h1>
+            <ul>
+                {% for user in users  %}
+                    <li>{{user.email_address}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <button><a href="/logout">Log out</a></button>
+    </div>
+</body>
+</html>

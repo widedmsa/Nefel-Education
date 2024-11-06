@@ -35,7 +35,7 @@
             <form action="/dojo/create" method="POST">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" >
-                {% for message in get_flashed_messages(category_filter=["name_validation"]) %}
+                {% for message in get_flashed_messages(category_filter=["na me_validation"]) %}
                     <div id="flash">
                         {{message}}         
                     </div>

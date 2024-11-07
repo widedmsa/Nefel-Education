@@ -1,5 +1,5 @@
 from mysqlconnection import connectToMySQL
-class Users:
+class User:
     DB = 'userss_schema'
     def __init__( self , data ):
         self.id=data['id']

@@ -15,7 +15,7 @@ def display_2():
 
 @app.route('/users/create', methods=['POST'])
 def submit_to_db():
-    Users.save(request.form)# we call the save class method of the Users class passing the form data to this method(which will inserting the new user data into the database).
+    User.save(request.form)# we call the save class method of the Users class passing the form data to this method(which will inserting the new user data into the database).
     return redirect('/users')
 
 
